@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Bienvenido a Corresponsal</string>
+    <string name="app_btn">Iniciar sesion</string>
+    <string name="app_correo">Correo Electronico</string>
+    <string name="app_contrasena">Contrasena</string>
+    <string name="app_tarjeta">Número de tarjeta</string>
+    <string name="app_cvv">CVV</string>
+    <string name="app_cliente">NOMBRE DEL CLIENTE</string>
+    <string name="app_pago">valor a pagar</string>
+    <string name="app_btnConfirmar">Confirmar</string>
+    <string name="app_cancelar">Cancelar</string>
+    <string name="app_id">Número de cédula</string>
+</resources>

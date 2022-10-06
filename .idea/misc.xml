@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/AMD/AndroidStudioProjects/Corresponsal/app/src/main/res/drawable/bordes.xml" value="0.2105" />
+        <entry key="..\:/Users/AMD/AndroidStudioProjects/Corresponsal/app/src/main/res/drawable/boton_redondo.xml" value="0.2105" />
+        <entry key="..\:/Users/AMD/AndroidStudioProjects/Corresponsal/app/src/main/res/drawable/btn_redondeado.xml" value="0.1575" />
+        <entry key="..\:/Users/AMD/AndroidStudioProjects/Corresponsal/app/src/main/res/layout/activity_login_admin.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/AndroidStudioProjects/Corresponsal/app/src/main/res/layout/activity_login_usuario.xml" value="0.25" />
+        <entry key="..\:/Users/AMD/AndroidStudioProjects/Corresponsal/app/src/main/res/layout/activity_main.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/AMD/AndroidStudioProjects/Corresponsal/app/src/main/res/layout/activity_main_usuario.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/drawable-xxxhdpi/btns_border.xml" value="0.173" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/drawable/bordes_azules.xml" value="0.2115" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/drawable/btn_redondeado.xml" value="0.1515" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/drawable/btns_azules.xml" value="0.173" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/drawable/sinborde.xml" value="0.1605" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/drawable/spinnerstyle.xml" value="0.2105" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_actualizar_cliente.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_actualizar_corresponsal.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_consultar_cliente.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_consultar_corresponsal.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_crear_cliente.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_depositos.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_historial_transaccional.xml" value="0.33" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_lista_clientes.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_lista_corresponsales.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_login_banco.xml" value="0.1" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_login_corresponsal.xml" value="0.1" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_main_banco.xml" value="0.25" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_main_corresponsal.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_pago.xml" value="0.33" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_registrar_corresponsal.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_retiros.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_saldo.xml" value="0.33" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/activity_transferencias.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsal-main/app/src/main/res/layout/card_layout.xml" value="0.33" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1615" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/drawable/bordes_azules.xml" value="0.1615" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/drawable/bordes_naranjas.xml" value="0.1515" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/drawable/btn_redondeado.xml" value="0.1515" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/drawable/btns_azules.xml" value="0.1615" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1615" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/drawable/sinborde.xml" value="0.1615" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_actualizar_cliente.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_actualizar_corresponsal.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_consultar_cliente.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_consultar_corresponsal.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_crear_cliente.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_depositos.xml" value="0.22" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_historial_transaccional.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_lista_clientes.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_lista_corresponsales.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_login_admin.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_login_banco.xml" value="0.2" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_login_corresponsal.xml" value="0.22" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_login_usuario.xml" value="0.22" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_main.xml" value="0.19021739130434784" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_main_banco.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_main_corresponsal.xml" value="0.25" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_main_usuario.xml" value="0.19021739130434784" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_pago.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_registrar_corresponsal.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_retiros.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_saldo.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AMD/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_transferencias.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/drawable/btn_redondeado.xml" value="0.307" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/drawable/btns_azules.xml" value="0.307" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_consultar_cliente.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_consultar_corresponsal.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_crear_cliente.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_depositos.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_historial_transaccional.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_lista_clientes.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_lista_corresponsales.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_login_admin.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_login_usuario.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_main.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_main_usuario.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_pago.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_registrar_corresponsal.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_retiros.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_saldo.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsal-main/app/src/main/res/layout/activity_transferencias.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/drawable-xxxhdpi/btns_border.xml" value="0.3085" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/drawable/bordes_azules.xml" value="0.3085" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/drawable/btn_redondeado.xml" value="0.3085" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/drawable/btns_azules.xml" value="0.3085" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/drawable/cuotas.xml" value="0.3085" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_depositos.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_historial_transaccional.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_login_banco.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_login_corresponsal.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_main_banco.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_main_corresponsal.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_pago.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_retiros.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_saldo.xml" value="0.3671875" />
+        <entry key="..\:/Users/vanes/Downloads/corresponsalMVP-main/app/src/main/res/layout/activity_transferencias.xml" value="0.3671875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

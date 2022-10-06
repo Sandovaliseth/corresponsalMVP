@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".view.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/intBanco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="interfazCorresponsal"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="204dp"
+            android:layout_height="166dp"
+            android:layout_marginStart="284dp"
+            android:layout_marginTop="-50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulop" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="166dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="532dp"
+            android:layout_marginEnd="336dp"
+            android:rotation="-10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            app:srcCompat="@drawable/circulop" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="353dp"
+            android:layout_height="294dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="284dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulocentral" />
+
+        <ImageButton
+            android:id="@+id/btnotrainterfaz"
+            android:layout_width="53dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/casa"
+            android:onClick="interfazCorresponsal"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.938"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="#4C4848"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            app:layout_constraintVertical_bias="0.217"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/linea2"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/btnIniciar"
+            android:layout_width="207dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="163dp"
+            android:layout_marginBottom="63dp"
+            android:background="@drawable/btn_redondeado"
+            android:text="@string/app_btn"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.655"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/correoElectronico"
+            android:layout_width="235dp"
+            android:layout_height="56dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.385"
+            app:startIconDrawable="@drawable/ic_correo"
+            tools:ignore="TouchTargetSizeCheck">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bordes_naranjas"
+                android:ems="10"
+                android:hint="@string/app_correo"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck,TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contrasena"
+            android:layout_width="235dp"
+            android:layout_height="55dp"
+            app:endIconMode="password_toggle"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.628"
+            app:startIconDrawable="@drawable/ic_contrasena"
+            tools:ignore="TouchTargetSizeCheck">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bordes_naranjas"
+                android:ems="10"
+                android:hint="@string/app_contrasena"
+                android:inputType="textPassword"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Interfaz 2 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/intCorresponsal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="interfazBanco"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="204dp"
+            android:layout_height="166dp"
+            android:layout_marginStart="276dp"
+            android:layout_marginTop="-50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageButton
+            android:id="@+id/btninterfazBanco"
+            android:layout_width="49dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="332dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/contratado"
+            android:onClick="interfazBanco"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="166dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="532dp"
+            android:layout_marginEnd="336dp"
+            android:rotation="-10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="352dp"
+            android:layout_height="305dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="280dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/elipse" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="#4C4848"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/linea" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/correoElectronicoC"
+            android:layout_width="235dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="100dp"
+            app:endIconMode="password_toggle"
+            app:layout_constraintBottom_toTopOf="@+id/contrasenaC"
+            app:layout_constraintEnd_toEndOf="@+id/imageView7"
+            app:layout_constraintStart_toStartOf="@+id/imageView7"
+            app:layout_constraintTop_toTopOf="@+id/imageView7"
+            app:startIconDrawable="@drawable/ic_contrasena"
+            tools:ignore="TouchTargetSizeCheck">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bordes_azules"
+                android:ems="10"
+                android:hint="@string/app_correo"
+                android:inputType="textPassword"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contrasenaC"
+            android:layout_width="235dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="95dp"
+            app:endIconMode="password_toggle"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/correoElectronicoC"
+            app:startIconDrawable="@drawable/ic_contrasena"
+            tools:ignore="TouchTargetSizeCheck">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bordes_azules"
+                android:ems="10"
+                android:hint="@string/app_contrasena"
+                android:inputType="textPassword"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnIniciarC"
+            android:layout_width="207dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="102dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/btns_azules"
+            android:text="@string/app_btn"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
