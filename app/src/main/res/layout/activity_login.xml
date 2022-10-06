@@ -249,7 +249,6 @@
             android:layout_width="235dp"
             android:layout_height="55dp"
             android:layout_marginTop="100dp"
-            app:endIconMode="password_toggle"
             app:layout_constraintBottom_toTopOf="@+id/contrasenaC"
             app:layout_constraintEnd_toEndOf="@+id/imageView7"
             app:layout_constraintStart_toStartOf="@+id/imageView7"
@@ -258,12 +257,12 @@
             tools:ignore="TouchTargetSizeCheck">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/correoC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bordes_azules"
                 android:ems="10"
                 android:hint="@string/app_correo"
-                android:inputType="textPassword"
                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -282,6 +281,7 @@
             tools:ignore="TouchTargetSizeCheck">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contraC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bordes_azules"
