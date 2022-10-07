@@ -17,46 +17,46 @@
             android:name=".view.ActualizarCorresponsalActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Usuario.ActualizarClienteActivity"
+            android:name=".view.Banco.ActualizarClienteActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Admin.SaldoActivity"
+            android:name=".view.Corresponsal.SaldoActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Admin.HistorialTransaccionalActivity"
+            android:name=".view.Corresponsal.HistorialTransaccionalActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Admin.TransferenciasActivity"
+            android:name=".view.Corresponsal.TransferenciasActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Admin.DepositosActivity"
+            android:name=".view.Corresponsal.DepositosActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Admin.RetirosActivity"
+            android:name=".view.Corresponsal.RetirosActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Admin.PagoActivity"
+            android:name=".view.Corresponsal.PagoActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Usuario.ListaCorresponsalesActivity"
+            android:name=".view.Banco.ListaCorresponsalesActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Usuario.ListaClientesActivity"
+            android:name=".view.Banco.ListaClientesActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Usuario.ConsultarCorresponsalActivity"
+            android:name=".view.Banco.ConsultarCorresponsalActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Usuario.ConsultarClienteActivity"
+            android:name=".view.Banco.ConsultarClienteActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Usuario.RegistrarCorresponsalActivity"
+            android:name=".view.Banco.RegistrarCorresponsalActivity"
             android:exported="false" />
         <activity
             android:name=".view.CrearClienteActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Usuario.MainUsuarioActivity"
+            android:name=".view.Banco.MainBActivity"
             android:exported="false" />
         <activity
             android:name=".view.LoginActivity"
@@ -68,7 +68,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.Admin.MainActivityAdmin"
+            android:name=".view.Corresponsal.MainActivityC"
             android:exported="true" />
     </application>
 

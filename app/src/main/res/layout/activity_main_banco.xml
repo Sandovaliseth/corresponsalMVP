@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".view.Usuario.MainUsuarioActivity">
+    tools:context=".view.Banco.MainBActivity">
 
     <ImageView
         android:id="@+id/imageView5"
@@ -47,7 +47,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btnCrear"
+        android:id="@+id/btnPago"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="47dp"
@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtNombreC" />
 
     <Button
-        android:id="@+id/btnRegistrar"
+        android:id="@+id/btnRetiros"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="72dp"
@@ -75,11 +75,11 @@
         android:textColor="@color/white"
         android:textSize="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnCrear"
+        app:layout_constraintStart_toEndOf="@+id/btnPago"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreC" />
 
     <Button
-        android:id="@+id/btnConsultarCliente"
+        android:id="@+id/btnDepositos"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="44dp"
@@ -91,10 +91,10 @@
         android:textColor="@color/white"
         android:textSize="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCrear" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPago" />
 
     <Button
-        android:id="@+id/btnConsultarCorresponsal"
+        android:id="@+id/btnTransferencias"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="77dp"
@@ -107,11 +107,11 @@
         android:textColor="@color/white"
         android:textSize="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnConsultarCliente"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar" />
+        app:layout_constraintStart_toEndOf="@+id/btnDepositos"
+        app:layout_constraintTop_toBottomOf="@+id/btnRetiros" />
 
     <Button
-        android:id="@+id/btnListadoClientes"
+        android:id="@+id/btnHistorial"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="47dp"
@@ -125,10 +125,10 @@
         android:textSize="8dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnConsultarCliente" />
+        app:layout_constraintTop_toBottomOf="@+id/btnDepositos" />
 
     <Button
-        android:id="@+id/btnListadoCorresponsal"
+        android:id="@+id/btnSaldo"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="77dp"
@@ -143,8 +143,8 @@
         android:textSize="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnListadoClientes"
-        app:layout_constraintTop_toBottomOf="@+id/btnConsultarCorresponsal" />
+        app:layout_constraintStart_toEndOf="@+id/btnHistorial"
+        app:layout_constraintTop_toBottomOf="@+id/btnTransferencias" />
 
     <Button
         android:id="@+id/menu2"

@@ -1,4 +1,4 @@
-package com.example.corresponsal.view.Admin;
+package com.example.corresponsal.view.Banco;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.corresponsal.R;
 
-public class MainActivityAdmin extends AppCompatActivity {
+public class ConsultarCorresponsalActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_corresponsal);
+        setContentView(R.layout.activity_consultar_corresponsal);
     }
 }

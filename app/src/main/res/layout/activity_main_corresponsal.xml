@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".view.Admin.MainActivityAdmin">
+    tools:context=".view.Corresponsal.MainActivityC">
 
     <ImageView
         android:id="@+id/imageView5"
@@ -18,9 +18,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="166dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="532dp"
+        android:layout_width="197dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="600dp"
         android:layout_marginEnd="336dp"
         android:rotation="-10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtSaldo" />
 
     <Button
-        android:id="@+id/btnCrear"
+        android:id="@+id/btnPago"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="50dp"
@@ -89,10 +89,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCuenta"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.319" />
 
     <Button
-        android:id="@+id/btnRegistrar"
+        android:id="@+id/btnRetiros"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="250dp"
@@ -107,13 +107,13 @@
         android:textSize="8dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCuenta"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.297" />
 
     <Button
-        android:id="@+id/btnConsultarCliente"
+        android:id="@+id/btnDepositos"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="50dp"
@@ -131,10 +131,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCuenta"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.22" />
 
     <Button
-        android:id="@+id/btnConsultarCorresponsal"
+        android:id="@+id/btnTransferencias"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="250dp"
@@ -149,13 +149,13 @@
         android:textSize="8dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCuenta"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.22" />
 
     <Button
-        android:id="@+id/btnListadoClientes"
+        android:id="@+id/btnHistorial"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="50dp"
@@ -173,10 +173,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCuenta"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.142" />
 
     <Button
-        android:id="@+id/btnListadoCorresponsal"
+        android:id="@+id/btnSaldo"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="250dp"
@@ -191,23 +191,22 @@
         android:textSize="8dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCuenta"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.135" />
 
     <Button
         android:id="@+id/menu2"
         android:layout_width="50dp"
         android:layout_height="48dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/sinborde"
         android:drawableRight="@drawable/menu"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintStart_toEndOf="@+id/txtSaldo"
-        app:layout_constraintTop_toTopOf="@+id/txtNombreC"
-        app:layout_constraintVertical_bias="0.0"
+        android:onClick="mostrarMenu"
+        app:layout_constraintStart_toEndOf="@+id/txtNombreC"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

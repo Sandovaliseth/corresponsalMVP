@@ -4,20 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.corresponsal.BD.BaseDatos;
 import com.example.corresponsal.Interfaces.InterfaceCorresponsal;
 import com.example.corresponsal.Presenter.PresentCorresponsal;
 import com.example.corresponsal.R;
 import com.example.corresponsal.entidades.Corresponsal;
-import com.example.corresponsal.view.Admin.MainActivityAdmin;
+import com.example.corresponsal.Adapter.SharedPreferences;
+import com.example.corresponsal.view.Corresponsal.MainActivityC;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity implements InterfaceCorresponsal.View, View.OnClickListener {
 
@@ -26,6 +24,7 @@ public class LoginActivity extends AppCompatActivity implements InterfaceCorresp
     Button iniciarSesion;
     InterfaceCorresponsal.Presenter presenterC;
     Corresponsal corresponsal;
+    SharedPreferences sharedPreference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +34,14 @@ public class LoginActivity extends AppCompatActivity implements InterfaceCorresp
         this.variables();
         presenterC = new PresentCorresponsal(this, getApplicationContext());
         corresponsal = new Corresponsal();
+
+        sharedPreference= new SharedPreferences(getApplicationContext());
+
+        if(sharedPreference.revisarSesion()) {
+            Intent intent = new Intent(LoginActivity.this, MainActivityC.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     public void interfazCorresponsal(View v){
@@ -61,7 +68,7 @@ public class LoginActivity extends AppCompatActivity implements InterfaceCorresp
     public void loginSucess() {
         Toast.makeText(getApplicationContext(), "Bienvenido", Toast.LENGTH_LONG
         ).show();
-        Intent intent = new Intent(getApplicationContext(), MainActivityAdmin.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivityC.class);
         startActivity(intent);
         finish();
     }
@@ -85,6 +92,7 @@ public class LoginActivity extends AppCompatActivity implements InterfaceCorresp
                     corresponsal.setCorreoElectronico(email);
                     corresponsal.setContrasena(contrasena);
                     presenterC.Login(corresponsal);
+                    sharedPreference.guardarSesion(iniciarSesion.isClickable());
                 } else {
                     Toast.makeText(getApplicationContext(), "Ingrese el datos vacío", Toast.LENGTH_LONG
                     ).show();

@@ -1,4 +1,4 @@
-package com.example.corresponsal.view.Usuario;
+package com.example.corresponsal.view.Banco;
 
 import androidx.appcompat.app.AppCompatActivity;
 

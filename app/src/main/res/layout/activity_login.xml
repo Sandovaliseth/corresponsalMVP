@@ -9,8 +9,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/intBanco"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="interfazCorresponsal"
+        android:layout_height="827dp"
+        android:onClick="interfazBanco"
         android:orientation="vertical"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,7 +35,7 @@
             android:id="@+id/imageView"
             android:layout_width="166dp"
             android:layout_height="150dp"
-            android:layout_marginTop="532dp"
+            android:layout_marginTop="600dp"
             android:layout_marginEnd="336dp"
             android:rotation="-10"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,10 +63,10 @@
             android:onClick="interfazCorresponsal"
             app:layout_constraintBottom_toBottomOf="@+id/imageView5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.938"
+            app:layout_constraintHorizontal_bias="0.952"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.022"
+            app:layout_constraintVertical_bias="0.047"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -200,9 +200,9 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="166dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="532dp"
+            android:layout_width="205dp"
+            android:layout_height="153dp"
+            android:layout_marginTop="600dp"
             android:layout_marginEnd="336dp"
             android:rotation="-10"
             app:layout_constraintEnd_toEndOf="parent"

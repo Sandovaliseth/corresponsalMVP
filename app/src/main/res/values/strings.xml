@@ -10,4 +10,7 @@
     <string name="app_btnConfirmar">Confirmar</string>
     <string name="app_cancelar">Cancelar</string>
     <string name="app_id">Número de cédula</string>
+    <string name="item_menu">Actualizar datos</string>
+    <string name="item2_menu">Crear cliente</string>
+    <string name="item3_menu">Cerrar sesión</string>
 </resources>
