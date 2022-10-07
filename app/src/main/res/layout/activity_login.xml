@@ -111,7 +111,7 @@
             app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/imageView4"
-            app:layout_constraintVertical_bias="0.655"
+            app:layout_constraintVertical_bias="0.256"
             tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
         <com.google.android.material.textfield.TextInputLayout

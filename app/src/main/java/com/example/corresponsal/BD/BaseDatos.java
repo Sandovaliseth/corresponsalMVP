@@ -17,13 +17,16 @@ public class BaseDatos extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Constantes.CREAR_CORRESPONSAL);
-        db.execSQL(Constantes.INSERTAR_CORRESPONSAL);
+        db.execSQL(Constantes.CREAR_CORRESPONSALPRINCIPAL);
+        db.execSQL(Constantes.INSERTAR_CORRESPONSALPRINCIPAL);
+        db.execSQL(Constantes.CREAR_BANCO);
+        db.execSQL(Constantes.INSERTAR_BANCO);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP TABLE " + Constantes.TABLE_CORRESPONSAL);
+        db.execSQL("DROP TABLE " + Constantes.TABLE_BANCO);
         onCreate(db);
     }
 }

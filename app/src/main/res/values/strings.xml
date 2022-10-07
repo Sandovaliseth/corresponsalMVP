@@ -13,4 +13,7 @@
     <string name="item_menu">Actualizar datos</string>
     <string name="item2_menu">Crear cliente</string>
     <string name="item3_menu">Cerrar sesión</string>
+    <string name="app_aceptar">Aceptar</string>
+    <string name="app_pin">PIN de la cuenta</string>
+    <string name="app_confirmarPin">Confirmar PIN de la cuenta</string>
 </resources>

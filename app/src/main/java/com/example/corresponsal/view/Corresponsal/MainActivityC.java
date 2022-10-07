@@ -6,8 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.corresponsal.R;
+import com.example.corresponsal.view.ActualizarCorresponsalActivity;
 import com.example.corresponsal.view.LoginActivity;
 
 public class MainActivityC extends AppCompatActivity implements View.OnClickListener {
@@ -57,8 +56,12 @@ public class MainActivityC extends AppCompatActivity implements View.OnClickList
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.menuActualizar:
+                        startActivity(new Intent(getApplicationContext(), ActualizarCorresponsalActivity.class));
+                        finish();
                         return true;
                     case R.id.menuNuevo:
+                        startActivity(new Intent(getApplicationContext(), CrearClienteBankActivity.class));
+                        finish();
                         return true;
                     case R.id.menuCerrar:
                         CerrarSesion();

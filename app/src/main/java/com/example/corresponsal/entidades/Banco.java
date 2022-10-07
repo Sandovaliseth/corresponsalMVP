@@ -1,13 +1,12 @@
 package com.example.corresponsal.entidades;
 
-public class Corresponsal {
+public class Banco {
     private int id;
     private String nombre;
-    private int NIT;
     private String correoElectronico;
     private String contrasena;
 
-    public Corresponsal() {
+    public Banco() {
     }
 
     public int getId() {
@@ -24,14 +23,6 @@ public class Corresponsal {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public int getNIT() {
-        return NIT;
-    }
-
-    public void setNIT(int NIT) {
-        this.NIT = NIT;
     }
 
     public String getCorreoElectronico() {

@@ -1,5 +1,6 @@
 package com.example.corresponsal.Models;
 
+import static com.example.corresponsal.BD.Constantes.TABLE_BANCO;
 import static com.example.corresponsal.BD.Constantes.TABLE_CORRESPONSAL;
 
 import android.content.Context;
@@ -7,16 +8,16 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.corresponsal.BD.BaseDatos;
-import com.example.corresponsal.Interfaces.InterfaceCorresponsal;
-import com.example.corresponsal.entidades.CorresponsalPrincipal;
+import com.example.corresponsal.Interfaces.InterfaceBanco;
+import com.example.corresponsal.entidades.Banco;
 
-public class ModelCorresponsal extends BaseDatos implements InterfaceCorresponsal.Model {
+public class ModelBanco extends BaseDatos implements InterfaceBanco.Model {
 
-    InterfaceCorresponsal.Presenter presenter;
+    InterfaceBanco.Presenter presenter;
     Context context;
     SQLiteDatabase db;
 
-    public ModelCorresponsal(InterfaceCorresponsal.Presenter presenter, Context context) {
+    public ModelBanco(InterfaceBanco.Presenter presenter, Context context) {
         super(context);
         this.context = context;
         this.presenter = presenter;
@@ -30,13 +31,14 @@ public class ModelCorresponsal extends BaseDatos implements InterfaceCorresponsa
     }
 
     @Override
-    public boolean Iniciar(CorresponsalPrincipal corresponsal) {
+    public boolean Iniciar(Banco banco) {
         db= this.OpenConexionDb(context);
-        Cursor cursorU = db.rawQuery("SELECT * FROM " + TABLE_CORRESPONSAL + " WHERE correoElectronico= '" + corresponsal.getCorreoElectronico() + "' AND contrasena= '" + corresponsal.getContrasena()+"'", null);
+        Cursor cursorU = db.rawQuery("SELECT * FROM " + TABLE_BANCO + " WHERE correoElectronico= '" + banco.getCorreoElectronico() + "' AND contrasena= '" + banco.getContrasena()+"'", null);
         if (cursorU.getCount()>0) {
             return true;
         } else {
             return false;
         }
     }
+
 }

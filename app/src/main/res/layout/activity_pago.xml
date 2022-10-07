@@ -135,6 +135,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="27dp"
         android:background="@color/blue"
+        android:inputType="number"
         android:padding="6dp"
         android:text="@string/app_cvv"
         android:textAlignment="center"

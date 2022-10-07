@@ -2,10 +2,9 @@ package com.example.corresponsal.Presenter;
 
 import android.content.Context;
 
-import com.example.corresponsal.BD.BaseDatos;
 import com.example.corresponsal.Interfaces.InterfaceCorresponsal;
 import com.example.corresponsal.Models.ModelCorresponsal;
-import com.example.corresponsal.entidades.Corresponsal;
+import com.example.corresponsal.entidades.CorresponsalPrincipal;
 
 public class PresentCorresponsal implements InterfaceCorresponsal.Presenter {
 
@@ -20,7 +19,7 @@ public class PresentCorresponsal implements InterfaceCorresponsal.Presenter {
     }
 
     @Override
-    public void Login(Corresponsal corresponsal) {
+    public void Login(CorresponsalPrincipal corresponsal) {
         if(this.model.Iniciar(corresponsal)){
             validarLogin();
         }else{

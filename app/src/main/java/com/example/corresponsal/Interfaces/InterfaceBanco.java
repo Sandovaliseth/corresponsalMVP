@@ -1,8 +1,8 @@
 package com.example.corresponsal.Interfaces;
 
-import com.example.corresponsal.entidades.CorresponsalPrincipal;
+import com.example.corresponsal.entidades.Banco;
 
-public interface InterfaceCorresponsal {
+public interface InterfaceBanco {
 
     interface View {
         void variables();
@@ -11,12 +11,13 @@ public interface InterfaceCorresponsal {
     }
 
     interface Presenter {
-        void Login(CorresponsalPrincipal corresponsal);
+        void Login(Banco banco);
         void validarLogin();
         void error();
     }
 
     interface Model {
-        boolean Iniciar(CorresponsalPrincipal corresponsal);
+        boolean Iniciar(Banco banco);
     }
+
 }

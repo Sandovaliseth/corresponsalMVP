@@ -16,7 +16,7 @@ public class SharedPreferences {
     }
 
     public String getSharedPreferences() {
-        return sp.getString("correoElectronico", "Corresponsal no registrado");
+        return sp.getString("correoElectronico", "Dato no registrado");
     }
 
     public void setSharedPreferences(String correo) {

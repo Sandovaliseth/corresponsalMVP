@@ -98,6 +98,53 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         tools:layout_editor_absoluteX="0dp" />
 
+    <EditText
+        android:id="@+id/cedula"
+        android:layout_width="247dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/bordes_azules"
+        android:ems="10"
+        android:hint="@string/app_id"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/pin"
+        android:layout_width="247dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/bordes_azules"
+        android:ems="10"
+        android:hint="@string/app_pin"
+        android:inputType="textPassword"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cedula" />
+
+    <EditText
+        android:id="@+id/confirmarPin"
+        android:layout_width="247dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/bordes_azules"
+        android:ems="10"
+        android:hint="@string/app_confirmarPin"
+        android:inputType="textPassword"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pin" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
@@ -106,40 +153,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/linea" />
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/cedula"
-        android:layout_width="252dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:ignore="TouchTargetSizeCheck">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bordes_azules"
-            android:ems="10"
-            android:hint="@string/app_id"
-            android:textSize="15dp"
-            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/montoRetiro"
-        android:layout_width="252dp"
+        android:layout_width="249dp"
         android:layout_height="43dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cedula"
+        app:layout_constraintTop_toBottomOf="@+id/confirmarPin"
         app:startIconDrawable="@drawable/simbolopesos"
         tools:ignore="TouchTargetSizeCheck">
 

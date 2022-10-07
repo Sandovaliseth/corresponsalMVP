@@ -126,21 +126,54 @@
             android:background="@drawable/bordes_azules"
             android:ems="10"
             android:hint="Número de cédula a transferir"
+            android:inputType="number"
             android:textSize="15dp"
             tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/pin"
+        android:layout_width="247dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/bordes_azules"
+        android:ems="10"
+        android:hint="@string/app_pin"
+        android:inputType="textPassword"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cedulaReceptor" />
+
+    <EditText
+        android:id="@+id/confirmarPin"
+        android:layout_width="247dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/bordes_azules"
+        android:ems="10"
+        android:hint="@string/app_confirmarPin"
+        android:inputType="textPassword"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pin" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cedulaEmisor"
         android:layout_width="252dp"
         android:layout_height="43dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cedulaReceptor"
+        app:layout_constraintTop_toBottomOf="@+id/confirmarPin"
         tools:ignore="TouchTargetSizeCheck">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -149,6 +182,7 @@
             android:background="@drawable/bordes_azules"
             android:ems="10"
             android:hint="Número de cédula que transfiere"
+            android:inputType="number"
             android:textSize="15dp"
             tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -158,7 +192,7 @@
         android:layout_width="252dp"
         android:layout_height="43dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -172,6 +206,7 @@
             android:background="@drawable/bordes_azules"
             android:ems="10"
             android:hint="Monto a transferir"
+            android:inputType="number"
             android:textSize="15dp"
             tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -205,10 +240,10 @@
         android:textColor="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintHorizontal_bias="0.327"
         app:layout_constraintStart_toEndOf="@+id/btnCancelar"
         app:layout_constraintTop_toBottomOf="@+id/montoTransferencia"
-        app:layout_constraintVertical_bias="0.296"
+        app:layout_constraintVertical_bias="0.508"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

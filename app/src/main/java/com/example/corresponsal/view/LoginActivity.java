@@ -9,22 +9,27 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.corresponsal.Interfaces.InterfaceBanco;
 import com.example.corresponsal.Interfaces.InterfaceCorresponsal;
+import com.example.corresponsal.Presenter.PresentBanco;
 import com.example.corresponsal.Presenter.PresentCorresponsal;
 import com.example.corresponsal.R;
-import com.example.corresponsal.entidades.Corresponsal;
+import com.example.corresponsal.entidades.Banco;
+import com.example.corresponsal.entidades.CorresponsalPrincipal;
 import com.example.corresponsal.Adapter.SharedPreferences;
 import com.example.corresponsal.view.Corresponsal.MainActivityC;
 import com.google.android.material.textfield.TextInputEditText;
 
-public class LoginActivity extends AppCompatActivity implements InterfaceCorresponsal.View, View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements InterfaceCorresponsal.View, InterfaceBanco.View, View.OnClickListener {
 
     ConstraintLayout interfazC, interfazB;
-    TextInputEditText correoCorresponsal, contrasenaCorresponsal;
-    Button iniciarSesion;
+    TextInputEditText correoCorresponsal, contrasenaCorresponsal, correoBanco, contrasenaBanco;
+    Button iniciarSesion, iniciarSesion2;
     InterfaceCorresponsal.Presenter presenterC;
-    Corresponsal corresponsal;
+    CorresponsalPrincipal corresponsal;
     SharedPreferences sharedPreference;
+    InterfaceBanco.Presenter presenterB;
+    Banco banco;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +38,9 @@ public class LoginActivity extends AppCompatActivity implements InterfaceCorresp
 
         this.variables();
         presenterC = new PresentCorresponsal(this, getApplicationContext());
-        corresponsal = new Corresponsal();
+        corresponsal = new CorresponsalPrincipal();
+        presenterB = new PresentBanco(this, getApplicationContext());
+        banco = new Banco();
 
         sharedPreference= new SharedPreferences(getApplicationContext());
 
@@ -60,8 +67,12 @@ public class LoginActivity extends AppCompatActivity implements InterfaceCorresp
         interfazB = (ConstraintLayout) findViewById(R.id.intBanco);
         correoCorresponsal = findViewById(R.id.correoC);
         contrasenaCorresponsal = findViewById(R.id.contraC);
+        correoBanco = findViewById(R.id.correoElectronico);
+        contrasenaBanco = findViewById(R.id.contrasena);
         iniciarSesion = findViewById(R.id.btnIniciarC);
         iniciarSesion.setOnClickListener(this);
+        iniciarSesion2 = findViewById(R.id.btnIniciar);
+        iniciarSesion2.setOnClickListener(this);
     }
 
     @Override
@@ -93,6 +104,18 @@ public class LoginActivity extends AppCompatActivity implements InterfaceCorresp
                     corresponsal.setContrasena(contrasena);
                     presenterC.Login(corresponsal);
                     sharedPreference.guardarSesion(iniciarSesion.isClickable());
+                } else {
+                    Toast.makeText(getApplicationContext(), "Ingrese el datos vacío", Toast.LENGTH_LONG
+                    ).show();
+                }
+                break;
+            case R.id.btnIniciar:
+                String emailB = correoBanco.getText().toString(), contrasenaB = contrasenaBanco.getText().toString();
+                if (vacioValidar(emailB) & vacioValidar(contrasenaB)) {
+                    banco.setCorreoElectronico(emailB);
+                    banco.setContrasena(contrasenaB);
+                    presenterB.Login(banco);
+                    sharedPreference.guardarSesion(iniciarSesion2.isClickable());
                 } else {
                     Toast.makeText(getApplicationContext(), "Ingrese el datos vacío", Toast.LENGTH_LONG
                     ).show();

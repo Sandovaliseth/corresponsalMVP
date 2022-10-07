@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".view.Banco.ConsultarClienteActivity">
+    tools:context=".view.Banco.PinBActivity">
 
     <ImageView
-    android:id="@+id/imageView5"
-    android:layout_width="204dp"
-    android:layout_height="166dp"
-    android:layout_marginStart="284dp"
-    android:layout_marginTop="-50dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:srcCompat="@drawable/circulop" />
+        android:id="@+id/imageView5"
+        android:layout_width="204dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="-50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circulop" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -27,33 +27,18 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:srcCompat="@drawable/circulop" />
 
-    <Button
-        android:id="@+id/menu2"
-        android:layout_width="78dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="44dp"
-        android:background="@drawable/sinborde"
-        android:drawableRight="@drawable/flecha"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="SpeakableTextPresentCheck" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="Consultar cliente"
+        android:layout_marginTop="30dp"
+        android:text="Ingrese su pin"
         android:textAlignment="center"
         android:textColor="#4C4848"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="30dp" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -64,57 +49,57 @@
         app:srcCompat="@drawable/linea2" />
 
     <EditText
-        android:id="@+id/txtNIT"
+        android:id="@+id/txtPin"
         android:layout_width="254dp"
-        android:layout_height="37dp"
+        android:layout_height="41dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="80dp"
         android:background="@drawable/bordes_naranjas"
         android:ems="10"
-        android:hint="Número de cédula a consultar"
+        android:hint="PIN"
+        android:textAlignment="center"
         android:inputType="number"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/btnConfirmar2"
-        android:layout_width="110dp"
+        android:id="@+id/btnCancelar3"
+        android:layout_width="107dp"
         android:layout_height="36dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="185dp"
-        android:background="@drawable/btn_redondeado"
-        android:text="@string/app_btnConfirmar"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnCancelar2"
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNIT"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/btnCancelar2"
-        android:layout_width="111dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="185dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="260dp"
         android:background="@drawable/btns_naranjas"
         android:text="@string/app_cancelar"
         android:textAllCaps="false"
         android:textColor="@color/orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNIT"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnAceptar"
+        app:layout_constraintTop_toBottomOf="@+id/txtPin"
         app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="110dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/btn_redondeado"
+        android:text="@string/app_aceptar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPin"
+        app:layout_constraintVertical_bias="0.219"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
