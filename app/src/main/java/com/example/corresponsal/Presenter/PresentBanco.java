@@ -29,7 +29,7 @@ public class PresentBanco implements InterfaceBanco.Presenter {
 
     @Override
     public void validarLogin() {
-        this.view.loginSucess();
+        this.view.loginSucessB();
     }
 
     @Override

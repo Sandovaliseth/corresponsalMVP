@@ -1,8 +1,10 @@
 package com.example.corresponsal.view.Corresponsal;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.corresponsal.R;
 import com.example.corresponsal.view.ActualizarCorresponsalActivity;
+import com.example.corresponsal.view.Banco.MainBActivity;
 import com.example.corresponsal.view.LoginActivity;
 
 public class MainActivityC extends AppCompatActivity implements View.OnClickListener {
@@ -74,12 +77,23 @@ public class MainActivityC extends AppCompatActivity implements View.OnClickList
     }
 
     private void CerrarSesion(){
-        sharedPreferences.edit().clear().apply();
-        Toast.makeText(getApplicationContext(), "Sesion finalizada", Toast.LENGTH_LONG
-        ).show();
-        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-        startActivity(intent);
-        finish();
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivityC.this);
+        builder.setMessage("¿Desea salir del tu app Corresponsal?")
+                .setPositiveButton("SI", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        sharedPreferences.edit().clear().apply();
+                        Toast.makeText(getApplicationContext(), "Sesion finalizada", Toast.LENGTH_LONG
+                        ).show();
+                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                        finish();
+                    }
+                })
+                .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                }).show();
     }
 
     @Override

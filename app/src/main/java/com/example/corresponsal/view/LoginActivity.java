@@ -17,8 +17,10 @@ import com.example.corresponsal.R;
 import com.example.corresponsal.entidades.Banco;
 import com.example.corresponsal.entidades.CorresponsalPrincipal;
 import com.example.corresponsal.Adapter.SharedPreferences;
+import com.example.corresponsal.view.Banco.MainBActivity;
 import com.example.corresponsal.view.Corresponsal.MainActivityC;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity implements InterfaceCorresponsal.View, InterfaceBanco.View, View.OnClickListener {
 
@@ -80,6 +82,15 @@ public class LoginActivity extends AppCompatActivity implements InterfaceCorresp
         Toast.makeText(getApplicationContext(), "Bienvenido", Toast.LENGTH_LONG
         ).show();
         Intent intent = new Intent(getApplicationContext(), MainActivityC.class);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public void loginSucessB() {
+        Toast.makeText(getApplicationContext(), "Bienvenido", Toast.LENGTH_LONG
+        ).show();
+        Intent intent = new Intent(getApplicationContext(), MainBActivity.class);
         startActivity(intent);
         finish();
     }

@@ -14,16 +14,16 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31" >
         <activity
-            android:name=".CrearClienteActivity"
+            android:name=".view.Banco.CrearClienteActivity"
             android:exported="false" />
         <activity
-            android:name=".PinBActivity"
+            android:name=".view.Banco.PinBActivity"
             android:exported="false" />
         <activity
-            android:name=".PinCoActivity"
+            android:name=".view.Corresponsal.PinCoActivity"
             android:exported="false" />
         <activity
-            android:name=".ConfirmarCorresponsalActivity"
+            android:name=".view.Corresponsal.ConfirmarCorresponsalActivity"
             android:exported="false" />
         <activity
             android:name=".view.ActualizarCorresponsalActivity"
@@ -81,7 +81,7 @@
         </activity>
         <activity
             android:name=".view.Corresponsal.MainActivityC"
-            android:exported="true" />
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -147,12 +147,13 @@
         app:layout_constraintTop_toBottomOf="@+id/btnTransferencias" />
 
     <Button
-        android:id="@+id/menu2"
+        android:id="@+id/menuB"
         android:layout_width="50dp"
         android:layout_height="48dp"
         android:layout_marginStart="72dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/sinborde"
+        android:onClick="mostrarMenu"
         android:drawableRight="@drawable/menu"
         app:layout_constraintStart_toEndOf="@+id/txtNombreC"
         app:layout_constraintTop_toTopOf="parent"

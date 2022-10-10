@@ -6,7 +6,7 @@ public interface InterfaceBanco {
 
     interface View {
         void variables();
-        void loginSucess();
+        void loginSucessB();
         void error();
     }
 
@@ -19,5 +19,4 @@ public interface InterfaceBanco {
     interface Model {
         boolean Iniciar(Banco banco);
     }
-
 }
