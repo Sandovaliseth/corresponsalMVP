@@ -20,7 +20,7 @@
         android:id="@+id/imageView"
         android:layout_width="166dp"
         android:layout_height="150dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="610dp"
         android:layout_marginEnd="336dp"
         android:rotation="-10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         android:drawableRight="@drawable/flecha"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintHorizontal_bias="0.993"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -83,7 +83,7 @@
     <EditText
         android:id="@+id/txtCedula"
         android:layout_width="254dp"
-        android:layout_height="37dp"
+        android:layout_height="39dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="80dp"
@@ -100,8 +100,8 @@
 
     <EditText
         android:id="@+id/pin"
-        android:layout_width="251dp"
-        android:layout_height="34dp"
+        android:layout_width="255dp"
+        android:layout_height="38dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="80dp"
@@ -111,15 +111,16 @@
         android:inputType="textPassword"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCedula"
         tools:ignore="TouchTargetSizeCheck" />
 
+
     <EditText
         android:id="@+id/confirmarPin"
-        android:layout_width="249dp"
-        android:layout_height="41dp"
+        android:layout_width="253dp"
+        android:layout_height="40dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="80dp"
@@ -129,20 +130,20 @@
         android:inputType="textPassword"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pin"
         tools:ignore="TouchTargetSizeCheck" />
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtsaldoI"
-        android:layout_width="249dp"
-        android:layout_height="42dp"
+        android:layout_width="251dp"
+        android:layout_height="53dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="80dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmarPin"
         app:startIconDrawable="@drawable/simbolopesos"
@@ -157,6 +158,25 @@
             android:textSize="15dp"
             tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnCancelar2"
+        android:layout_width="111dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="185dp"
+        android:background="@drawable/btns_naranjas"
+        android:text="@string/app_cancelar"
+        android:textAllCaps="false"
+        android:textColor="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnConfirmar2"
+        app:layout_constraintTop_toBottomOf="@+id/txtsaldoI"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/btnConfirmar2"
@@ -175,26 +195,7 @@
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtsaldoI"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/btnCancelar2"
-        android:layout_width="111dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="185dp"
-        android:background="@drawable/btns_naranjas"
-        android:text="@string/app_cancelar"
-        android:textAllCaps="false"
-        android:textColor="@color/orange"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnConfirmar2"
-        app:layout_constraintTop_toBottomOf="@+id/txtsaldoI"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

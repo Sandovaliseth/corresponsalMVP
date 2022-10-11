@@ -20,7 +20,7 @@
         android:id="@+id/imageView"
         android:layout_width="166dp"
         android:layout_height="150dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="610dp"
         android:layout_marginEnd="336dp"
         android:rotation="-10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         android:drawableRight="@drawable/flecha"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -145,7 +145,8 @@
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cedulaReceptor" />
+        app:layout_constraintTop_toBottomOf="@+id/cedulaReceptor"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/confirmarPin"
@@ -161,7 +162,8 @@
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pin" />
+        app:layout_constraintTop_toBottomOf="@+id/pin"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cedulaEmisor"
@@ -240,10 +242,10 @@
         android:textColor="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintHorizontal_bias="0.298"
         app:layout_constraintStart_toEndOf="@+id/btnCancelar"
         app:layout_constraintTop_toBottomOf="@+id/montoTransferencia"
-        app:layout_constraintVertical_bias="0.508"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

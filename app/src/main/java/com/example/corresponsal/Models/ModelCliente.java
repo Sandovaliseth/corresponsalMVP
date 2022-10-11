@@ -1,13 +1,20 @@
 package com.example.corresponsal.Models;
 
+import static com.example.corresponsal.BD.Constantes.TABLE_CLIENTE;
+import static com.example.corresponsal.BD.Constantes.TABLE_CORRESPONSAL;
+
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.corresponsal.BD.BaseDatos;
 import com.example.corresponsal.BD.Constantes;
 import com.example.corresponsal.Interfaces.InterfaceCliente;
 import com.example.corresponsal.entidades.Cliente;
+import com.example.corresponsal.entidades.CorresponsalPrincipal;
+
+import java.util.ArrayList;
 
 public class ModelCliente extends BaseDatos implements InterfaceCliente.Model {
 
@@ -52,17 +59,39 @@ public class ModelCliente extends BaseDatos implements InterfaceCliente.Model {
     }
 
     @Override
-    public void consultar(Cliente cliente) {
-
+    public ArrayList<Cliente> mostrarClientes() {
+            db= this.OpenConexionDb(context);
+            ArrayList<Cliente> listadoClientes = new ArrayList<>();
+            Cliente cliente = null;
+            Cursor cursorClientes = null;
+            cursorClientes = db.rawQuery("SELECT * FROM " + TABLE_CLIENTE, null);
+            if(cursorClientes.moveToFirst()){
+                do{
+                    cliente = new Cliente();
+                    cliente.setId(cursorClientes.getInt(0));
+                    cliente.setNombre(cursorClientes.getString(1));
+                    cliente.setDocumento(cursorClientes.getInt(2));
+                    cliente.setSaldo(cursorClientes.getLong(3));
+                    listadoClientes.add(cliente);
+                } while (cursorClientes.moveToNext());
+            }
+            cursorClientes.close();
+            return listadoClientes;
     }
 
     @Override
-    public void listado(Cliente cliente) {
-
-    }
-
-    @Override
-    public void saldo(Cliente cliente) {
-
+    public Cliente consultarCliente(Cliente cliente) {
+        db= this.OpenConexionDb(context);
+        Cliente clienteConsulta = null;
+        Cursor cursorCliente;
+        cursorCliente = db.rawQuery("SELECT * FROM " + TABLE_CLIENTE + " WHERE id= " + cliente.getDocumento() + " LIMIT 1", null);
+        if(cursorCliente.moveToFirst()){
+            clienteConsulta = new Cliente();
+            clienteConsulta.setNombre(cursorCliente.getString(0));
+            clienteConsulta.setDocumento(cursorCliente.getInt(1));
+            clienteConsulta.setSaldo(cursorCliente.getLong(2));
+        }
+        cursorCliente.close();
+        return clienteConsulta;
     }
 }

@@ -28,6 +28,21 @@ public class PresentCorresponsal implements InterfaceCorresponsal.Presenter {
     }
 
     @Override
+    public void insertar(CorresponsalPrincipal corresponsal) {
+        this.model.registrarCorresponsal(corresponsal);
+    }
+
+    @Override
+    public void consultar(CorresponsalPrincipal corresponsal) {
+        this.model.consultarCorresponsal(corresponsal);
+    }
+
+    @Override
+    public void listado() {
+        this.model.mostrarCorresponsal();
+    }
+
+    @Override
     public void validarLogin() {
         this.view.loginSucess();
     }

@@ -20,7 +20,7 @@
         android:id="@+id/imageView"
         android:layout_width="166dp"
         android:layout_height="150dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="600dp"
         android:layout_marginEnd="336dp"
         android:rotation="-10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         android:drawableRight="@drawable/flecha"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -66,9 +66,9 @@
     <EditText
         android:id="@+id/txtNombreCliente"
         android:layout_width="254dp"
-        android:layout_height="37dp"
+        android:layout_height="43dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="80dp"
         android:background="@drawable/bordes_azules"
         android:ems="10"
@@ -84,7 +84,7 @@
     <EditText
         android:id="@+id/txtCedula"
         android:layout_width="254dp"
-        android:layout_height="37dp"
+        android:layout_height="41dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="80dp"
@@ -101,8 +101,8 @@
 
     <EditText
         android:id="@+id/pin"
-        android:layout_width="247dp"
-        android:layout_height="38dp"
+        android:layout_width="252dp"
+        android:layout_height="40dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="80dp"
@@ -112,14 +112,16 @@
         android:inputType="number"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.684"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCedula"
         tools:ignore="TouchTargetSizeCheck" />
 
+
     <EditText
         android:id="@+id/confirmarPin"
-        android:layout_width="247dp"
-        android:layout_height="38dp"
+        android:layout_width="248dp"
+        android:layout_height="41dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="80dp"
@@ -129,20 +131,20 @@
         android:inputType="number"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.866"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pin"
         tools:ignore="TouchTargetSizeCheck" />
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtsaldoI"
-        android:layout_width="245dp"
-        android:layout_height="50dp"
+        android:layout_width="247dp"
+        android:layout_height="53dp"
         android:layout_marginStart="78dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="81dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmarPin"
         app:startIconDrawable="@drawable/simbolopesos"
@@ -164,7 +166,7 @@
         android:layout_width="110dp"
         android:layout_height="36dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="185dp"
         android:background="@drawable/btns_azules"
@@ -176,7 +178,7 @@
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtsaldoI"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
@@ -184,7 +186,7 @@
         android:layout_width="111dp"
         android:layout_height="37dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="185dp"
         android:background="@drawable/btns_border"
@@ -195,7 +197,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnConfirmar2"
         app:layout_constraintTop_toBottomOf="@+id/txtsaldoI"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

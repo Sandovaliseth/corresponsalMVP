@@ -20,7 +20,7 @@
         android:id="@+id/imageView"
         android:layout_width="166dp"
         android:layout_height="150dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="610dp"
         android:layout_marginEnd="336dp"
         android:rotation="-10"
         app:layout_constraintEnd_toEndOf="parent"

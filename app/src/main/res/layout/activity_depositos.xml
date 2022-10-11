@@ -20,7 +20,7 @@
         android:id="@+id/imageView"
         android:layout_width="166dp"
         android:layout_height="150dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="610dp"
         android:layout_marginEnd="336dp"
         android:rotation="-10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         android:drawableRight="@drawable/flecha"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -89,33 +89,34 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="44dp"
         android:text="Deposito"
         android:textAlignment="center"
         android:textColor="#4C4848"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:layout_editor_absoluteX="30dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/linea" />
+        app:srcCompat="@drawable/linea"
+        tools:layout_editor_absoluteX="0dp" />
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cedulaDestinario"
-        android:layout_width="252dp"
-        android:layout_height="43dp"
+        android:layout_width="250dp"
+        android:layout_height="49dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="100dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         tools:ignore="TouchTargetSizeCheck">
@@ -133,13 +134,13 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cedula"
-        android:layout_width="252dp"
-        android:layout_height="43dp"
+        android:layout_width="250dp"
+        android:layout_height="51dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="100dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cedulaDestinario"
         tools:ignore="TouchTargetSizeCheck">
@@ -158,11 +159,12 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/montoRetiro"
         android:layout_width="252dp"
-        android:layout_height="43dp"
+        android:layout_height="51dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="100dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cedula"
         app:startIconDrawable="@drawable/simbolopesos"

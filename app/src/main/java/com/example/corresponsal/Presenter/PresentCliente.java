@@ -6,6 +6,8 @@ import com.example.corresponsal.Interfaces.InterfaceCliente;
 import com.example.corresponsal.Models.ModelCliente;
 import com.example.corresponsal.entidades.Cliente;
 
+import java.util.ArrayList;
+
 public class PresentCliente implements InterfaceCliente.Presenter {
 
     InterfaceCliente.View view;
@@ -24,18 +26,13 @@ public class PresentCliente implements InterfaceCliente.Presenter {
     }
 
     @Override
-    public void consultarCliente(Cliente cliente) {
-        this.model.consultar(cliente);
+    public Cliente consultarCliente(Cliente cliente) {
+        return this.model.consultarCliente(cliente);
     }
 
     @Override
-    public void listaClientes(Cliente cliente) {
-        this.model.listado(cliente);
-    }
-
-    @Override
-    public void saldoCliente(Cliente cliente) {
-        this.model.saldo(cliente);
+    public ArrayList<Cliente> lista() {
+        return this.model.mostrarClientes();
     }
 
     @Override

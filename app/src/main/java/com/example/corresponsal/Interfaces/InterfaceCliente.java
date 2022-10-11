@@ -2,6 +2,8 @@ package com.example.corresponsal.Interfaces;
 
 import com.example.corresponsal.entidades.Cliente;
 
+import java.util.ArrayList;
+
 public interface InterfaceCliente {
 
     interface View {
@@ -11,16 +13,14 @@ public interface InterfaceCliente {
 
     interface Presenter {
         void nuevoCliente(Cliente cliente);
-        void consultarCliente(Cliente cliente);
-        void listaClientes(Cliente cliente);
-        void saldoCliente(Cliente cliente);
+        Cliente consultarCliente(Cliente cliente);
+        ArrayList<Cliente> lista();
         void validacion(long dato);
     }
 
     interface Model {
         long insertarCliente(Cliente cliente);
-        void consultar(Cliente cliente);
-        void listado(Cliente cliente);
-        void saldo(Cliente cliente);
+        ArrayList<Cliente> mostrarClientes();
+        Cliente consultarCliente(Cliente cliente);
     }
 }

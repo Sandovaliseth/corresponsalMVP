@@ -20,7 +20,7 @@
         android:id="@+id/imageView"
         android:layout_width="166dp"
         android:layout_height="150dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="600dp"
         android:layout_marginEnd="336dp"
         android:rotation="-10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -143,18 +143,20 @@
         android:textSize="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toEndOf="@+id/btnHistorial"
-        app:layout_constraintTop_toBottomOf="@+id/btnTransferencias" />
+        app:layout_constraintTop_toBottomOf="@+id/btnTransferencias"
+        app:layout_constraintVertical_bias="0.346" />
 
     <Button
         android:id="@+id/menuB"
         android:layout_width="50dp"
         android:layout_height="48dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/sinborde"
-        android:onClick="mostrarMenu"
         android:drawableRight="@drawable/menu"
+        android:onClick="mostrarMenu"
         app:layout_constraintStart_toEndOf="@+id/txtNombreC"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />

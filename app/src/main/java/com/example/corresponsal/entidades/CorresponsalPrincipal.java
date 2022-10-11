@@ -4,10 +4,10 @@ public class CorresponsalPrincipal {
 
     private int id;
     private String nombreCorresponsal;
-    private double saldo;
     private int numeroCuenta;
     private String correoElectronico;
     private String contrasena;
+    private double saldo;
 
     public CorresponsalPrincipal() {
     }

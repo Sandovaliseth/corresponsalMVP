@@ -20,7 +20,7 @@
         android:id="@+id/imageView"
         android:layout_width="166dp"
         android:layout_height="150dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="610dp"
         android:layout_marginEnd="336dp"
         android:rotation="-10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         android:drawableRight="@drawable/flecha"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -90,29 +90,29 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/btns_border"
                 android:ems="10"
-                android:hint="Número de cuenta"
+                android:hint="NIT corresponsal"
                 android:textSize="18dp"
                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="369dp"
-        android:layout_height="465dp"
+        android:layout_width="355dp"
+        android:layout_height="562dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.037">
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="455dp" />
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

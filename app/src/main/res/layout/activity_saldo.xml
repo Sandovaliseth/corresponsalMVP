@@ -20,7 +20,7 @@
         android:id="@+id/imageView"
         android:layout_width="166dp"
         android:layout_height="150dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="610dp"
         android:layout_marginEnd="336dp"
         android:rotation="-10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         android:drawableRight="@drawable/flecha"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintHorizontal_bias="0.993"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -68,7 +68,7 @@
         android:layout_width="254dp"
         android:layout_height="41dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="11dp"
         android:background="@drawable/bordes_azules"
@@ -78,26 +78,9 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/txtPin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <EditText
-        android:id="@+id/txtPin"
-        android:layout_width="254dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="80dp"
-        android:background="@drawable/bordes_azules"
-        android:ems="10"
-        android:hint="PIN de la cuenta"
-        android:inputType="number"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cedulaConsultar"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
@@ -105,7 +88,7 @@
         android:layout_width="254dp"
         android:layout_height="41dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="80dp"
         android:background="@drawable/bordes_azules"
         android:ems="10"
@@ -114,10 +97,28 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPin"
-        app:layout_constraintVertical_bias="0.017"
+        app:layout_constraintVertical_bias="0.039"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txtPin"
+        android:layout_width="254dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/bordes_azules"
+        android:ems="10"
+        android:hint="PIN de la cuenta"
+        android:inputType="number"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cedulaConsultar"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
@@ -149,10 +150,10 @@
         android:textColor="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.937"
         app:layout_constraintStart_toEndOf="@+id/btnCancelar"
         app:layout_constraintTop_toBottomOf="@+id/txtConfirmarPin"
-        app:layout_constraintVertical_bias="0.398"
+        app:layout_constraintVertical_bias="0.353"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

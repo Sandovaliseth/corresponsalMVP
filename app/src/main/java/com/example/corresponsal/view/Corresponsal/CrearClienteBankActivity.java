@@ -80,7 +80,7 @@ public class CrearClienteBankActivity extends AppCompatActivity implements View.
 
     public long validarRegistro(long dato) {
         if(dato>0){
-            Intent intent = new Intent(getApplicationContext(), ConfirmarCorresponsalActivity.class);
+            Intent intent = new Intent(getApplicationContext(), PinCoActivity.class);
             startActivity(intent);
         } else{
             Toast.makeText(getApplicationContext(), "Error al guardar registro", Toast.LENGTH_LONG
