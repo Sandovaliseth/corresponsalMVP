@@ -3,6 +3,7 @@ package com.example.corresponsal.view.Banco;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 import com.example.corresponsal.R;
 import com.example.corresponsal.view.ActualizarCorresponsalActivity;
 import com.example.corresponsal.view.Corresponsal.CrearClienteBankActivity;
+import com.example.corresponsal.view.Corresponsal.MainActivityC;
 import com.example.corresponsal.view.LoginActivity;
 
 public class MainBActivity extends AppCompatActivity {
@@ -28,6 +30,8 @@ public class MainBActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_banco);
+
+        sharedPreferences = getSharedPreferences("bd_shared", Context.MODE_PRIVATE);
     }
 
     public void mostrarMenu(View v) {
@@ -62,11 +66,11 @@ public class MainBActivity extends AppCompatActivity {
                 .setPositiveButton("SI", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                            sharedPreferences.edit().clear().apply();
                             Toast.makeText(getApplicationContext(), "Sesion finalizada", Toast.LENGTH_LONG
                             ).show();
                             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                             finish();
+                            sharedPreferences.edit().clear().apply();
                     }
                 })
                 .setNegativeButton("NO", new DialogInterface.OnClickListener() {

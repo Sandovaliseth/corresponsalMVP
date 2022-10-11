@@ -133,6 +133,7 @@
                 android:background="@drawable/bordes_naranjas"
                 android:ems="10"
                 android:hint="@string/app_correo"
+                android:inputType="textEmailAddress"
                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck,TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -263,6 +264,7 @@
                 android:background="@drawable/bordes_azules"
                 android:ems="10"
                 android:hint="@string/app_correo"
+                android:inputType="textEmailAddress"
                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 

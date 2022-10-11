@@ -33,7 +33,7 @@ public class ModelBanco extends BaseDatos implements InterfaceBanco.Model {
     @Override
     public boolean Iniciar(Banco banco) {
         db= this.OpenConexionDb(context);
-        Cursor cursorU = db.rawQuery("SELECT * FROM " + TABLE_BANCO + " WHERE correoElectronico= '" + banco.getCorreoElectronico() + "' AND contrasena= '" + banco.getContrasena()+"'", null);
+        Cursor cursorU = db.rawQuery("SELECT * FROM " + TABLE_BANCO + " WHERE correoElectronico= '" + banco.getCorreoE() + "' AND contrasena= '" + banco.getContrasena()+"'", null);
         if (cursorU.getCount()>0) {
             return true;
         } else {

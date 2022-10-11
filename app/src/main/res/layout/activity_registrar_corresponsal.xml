@@ -108,6 +108,7 @@
         android:background="@drawable/bordes_naranjas"
         android:ems="10"
         android:hint="Correo corresponsal"
+        android:inputType="textEmailAddress"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"

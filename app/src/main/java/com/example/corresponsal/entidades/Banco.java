@@ -3,7 +3,7 @@ package com.example.corresponsal.entidades;
 public class Banco {
     private int id;
     private String nombre;
-    private String correoElectronico;
+    private String correoE;
     private String contrasena;
 
     public Banco() {
@@ -25,12 +25,12 @@ public class Banco {
         this.nombre = nombre;
     }
 
-    public String getCorreoElectronico() {
-        return correoElectronico;
+    public String getCorreoE() {
+        return correoE;
     }
 
-    public void setCorreoElectronico(String correoElectronico) {
-        this.correoElectronico = correoElectronico;
+    public void setCorreoE(String correoE) {
+        this.correoE = correoE;
     }
 
     public String getContrasena() {

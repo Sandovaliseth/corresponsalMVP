@@ -6,6 +6,7 @@ public class Corresponsal {
     private int NIT;
     private String correoElectronico;
     private String contrasena;
+    private double saldo;
 
     public Corresponsal() {
     }
@@ -48,5 +49,13 @@ public class Corresponsal {
 
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 }

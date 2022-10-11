@@ -45,10 +45,11 @@ public class LoginActivity extends AppCompatActivity implements InterfaceCorresp
         banco = new Banco();
 
         sharedPreference= new SharedPreferences(getApplicationContext());
-
-        if(sharedPreference.revisarSesion()) {
-            Intent intent = new Intent(LoginActivity.this, MainActivityC.class);
-            startActivity(intent);
+        if (sharedPreference.revisarSesion()){
+            startActivity(new Intent(LoginActivity.this, MainActivityC.class));
+            finish();
+        } else if(sharedPreference.revisarSesionBanco()) {
+            startActivity(new Intent(LoginActivity.this, MainBActivity.class));
             finish();
         }
     }
@@ -123,10 +124,10 @@ public class LoginActivity extends AppCompatActivity implements InterfaceCorresp
             case R.id.btnIniciar:
                 String emailB = correoBanco.getText().toString(), contrasenaB = contrasenaBanco.getText().toString();
                 if (vacioValidar(emailB) & vacioValidar(contrasenaB)) {
-                    banco.setCorreoElectronico(emailB);
+                    banco.setCorreoE(emailB);
                     banco.setContrasena(contrasenaB);
                     presenterB.Login(banco);
-                    sharedPreference.guardarSesion(iniciarSesion2.isClickable());
+                    sharedPreference.guardarSesionBanco(iniciarSesion2.isClickable());
                 } else {
                     Toast.makeText(getApplicationContext(), "Ingrese el datos vacío", Toast.LENGTH_LONG
                     ).show();
