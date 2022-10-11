@@ -20,7 +20,7 @@ public class PresentCliente implements InterfaceCliente.Presenter {
 
     @Override
     public void nuevoCliente(Cliente cliente) {
-        this.model.insertarCliente(cliente);
+        validacion(this.model.insertarCliente(cliente));
     }
 
     @Override
@@ -36,5 +36,10 @@ public class PresentCliente implements InterfaceCliente.Presenter {
     @Override
     public void saldoCliente(Cliente cliente) {
         this.model.saldo(cliente);
+    }
+
+    @Override
+    public void validacion(long dato) {
+        this.view.validarRegistro(dato);
     }
 }

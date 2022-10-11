@@ -92,6 +92,8 @@ public class MainActivityC extends AppCompatActivity implements View.OnClickList
                 .setNegativeButton("NO", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(getApplicationContext(), "Accion cancelada", Toast.LENGTH_LONG
+                        ).show();
                     }
                 }).show();
     }

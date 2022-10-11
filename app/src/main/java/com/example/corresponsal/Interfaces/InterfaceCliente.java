@@ -6,6 +6,7 @@ public interface InterfaceCliente {
 
     interface View {
         void variables();
+        long validarRegistro(long dato);
     }
 
     interface Presenter {
@@ -13,6 +14,7 @@ public interface InterfaceCliente {
         void consultarCliente(Cliente cliente);
         void listaClientes(Cliente cliente);
         void saldoCliente(Cliente cliente);
+        void validacion(long dato);
     }
 
     interface Model {

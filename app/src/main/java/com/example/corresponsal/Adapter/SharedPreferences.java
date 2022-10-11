@@ -15,6 +15,8 @@ public class SharedPreferences {
         editor = sp.edit();
     }
 
+    //verifocar sesion
+
     public String getSharedPreferences() {
         return sp.getString("correoElectronico", "Dato no registrado");
     }

@@ -2,6 +2,7 @@ package com.example.corresponsal.view.Corresponsal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,8 @@ import com.example.corresponsal.entidades.Cliente;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Locale;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class CrearClienteBankActivity extends AppCompatActivity implements View.OnClickListener, InterfaceCliente.View {
 
@@ -46,9 +49,18 @@ public class CrearClienteBankActivity extends AppCompatActivity implements View.
                 presenter.nuevoCliente(cliente);
                 break;
             case R.id.btnCancelar2:
-
-                break;
-            default:
+                new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                        .setTitleText("Registro cliente cancelado")
+                        .setConfirmText("Salir")
+                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                            @Override
+                            public void onClick(SweetAlertDialog sDialog) {
+                                sDialog.dismissWithAnimation();
+                                startActivity(new Intent(getApplicationContext(), MainActivityC.class));
+                                finish();
+                            }
+                        })
+                        .show();
                 break;
         }
     }
@@ -64,5 +76,16 @@ public class CrearClienteBankActivity extends AppCompatActivity implements View.
         confirmar.setOnClickListener(this);
         cancelar = findViewById(R.id.btnCancelar2);
         cancelar.setOnClickListener(this);
+    }
+
+    public long validarRegistro(long dato) {
+        if(dato>0){
+            Intent intent = new Intent(getApplicationContext(), ConfirmarCorresponsalActivity.class);
+            startActivity(intent);
+        } else{
+            Toast.makeText(getApplicationContext(), "Error al guardar registro", Toast.LENGTH_LONG
+            ).show();
+        }
+        return dato;
     }
 }
