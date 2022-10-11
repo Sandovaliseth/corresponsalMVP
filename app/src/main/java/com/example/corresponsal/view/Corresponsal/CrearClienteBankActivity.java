@@ -14,6 +14,8 @@ import com.example.corresponsal.R;
 import com.example.corresponsal.entidades.Cliente;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.Locale;
+
 public class CrearClienteBankActivity extends AppCompatActivity implements View.OnClickListener, InterfaceCliente.View {
 
     EditText nombre, cedula, pin, confirmarPin;
@@ -62,19 +64,5 @@ public class CrearClienteBankActivity extends AppCompatActivity implements View.
         confirmar.setOnClickListener(this);
         cancelar = findViewById(R.id.btnCancelar2);
         cancelar.setOnClickListener(this);
-    }
-
-    public void validarMayusculas(String dato){
-        /*if(dato){
-
-        } else {
-            Toast.makeText(this, "El nombre del usuario debe estar ", Toast.LENGTH_LONG
-            ).show();
-        } */
-
-    }
-
-    public void saldoInicial(){
-
     }
 }

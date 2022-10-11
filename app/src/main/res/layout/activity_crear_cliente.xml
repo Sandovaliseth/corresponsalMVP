@@ -73,6 +73,7 @@
         android:background="@drawable/bordes_azules"
         android:ems="10"
         android:hint="NOMBRE DEL CLIENTE"
+        android:inputType="textCapCharacters"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
