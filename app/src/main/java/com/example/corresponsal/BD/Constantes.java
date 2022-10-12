@@ -10,4 +10,6 @@ public class Constantes {
     public static final String CREAR_BANCO = "CREATE TABLE " + TABLE_BANCO + "(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, correoElectronico TEXT, contrasena TEXT)";
     public static final String INSERTAR_BANCO = "INSERT INTO " + TABLE_BANCO + "(nombre, correoElectronico, contrasena) VALUES ('BancoHi','admin@wposs.com', 'Admin123*')";
     public static final String CREAR_CLIENTE = "CREATE TABLE " + TABLE_CLIENTE + "(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, documento INTEGER, PIN INTEGER, confirmarPIN INTEGER, saldo Double)";
+
+    //Preferences
 }

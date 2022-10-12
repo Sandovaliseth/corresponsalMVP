@@ -24,8 +24,6 @@ public class CrearClienteBankActivity extends AppCompatActivity implements View.
     EditText nombre, cedula, pin, confirmarPin;
     TextInputEditText saldoInicial;
     Button confirmar, cancelar;
-    Cliente cliente;
-    InterfaceCliente.Presenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,20 +31,19 @@ public class CrearClienteBankActivity extends AppCompatActivity implements View.
         setContentView(R.layout.activity_crear_cliente);
 
         this.variables();
-        cliente = new Cliente();
-        presenter = new PresentCliente(this, getApplicationContext());
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnConfirmar2:
-                cliente.setNombre(nombre.getText().toString());
-                cliente.setDocumento(Integer.parseInt(cedula.getText().toString()));
-                cliente.setPIN(Integer.parseInt(pin.getText().toString()));
-                cliente.setConfirmarPIN(Integer.parseInt(confirmarPin.getText().toString()));
-                cliente.setSaldo(Double.parseDouble(saldoInicial.getText().toString()));
-                presenter.nuevoCliente(cliente);
+                Bundle enviarDatos = new Bundle();
+                enviarDatos.putString("nombre", nombre.getText().toString());
+                enviarDatos.putInt("cedula", Integer.parseInt(cedula.getText().toString()));
+                enviarDatos.putDouble("saldo", Double.parseDouble(saldoInicial.getText().toString()));
+                Intent intent = new Intent(getApplicationContext(), PinCoActivity.class);
+                intent.putExtras(enviarDatos);
+                startActivity(intent);
                 break;
             case R.id.btnCancelar2:
                 new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
@@ -78,14 +75,8 @@ public class CrearClienteBankActivity extends AppCompatActivity implements View.
         cancelar.setOnClickListener(this);
     }
 
+    @Override
     public long validarRegistro(long dato) {
-        if(dato>0){
-            Intent intent = new Intent(getApplicationContext(), PinCoActivity.class);
-            startActivity(intent);
-        } else{
-            Toast.makeText(getApplicationContext(), "Error al guardar registro", Toast.LENGTH_LONG
-            ).show();
-        }
-        return dato;
+        return 0;
     }
 }

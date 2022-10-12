@@ -15,15 +15,15 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.corresponsal.Interfaces.InterfaceCliente;
 import com.example.corresponsal.R;
 import com.example.corresponsal.view.ActualizarCorresponsalActivity;
-import com.example.corresponsal.view.Banco.MainBActivity;
 import com.example.corresponsal.view.LoginActivity;
 
-public class MainActivityC extends AppCompatActivity implements View.OnClickListener {
+public class MainActivityC extends AppCompatActivity implements View.OnClickListener, InterfaceCliente.View {
 
     Button menu, pagar, retiros, depositos, transferencias, historialT, consultarSaldo;
-    TextView nombre, saldo, cuenta;
+    TextView txtnombre, txtsaldo, txtcuenta;
     SharedPreferences sharedPreferences;
     PopupMenu popupMenu;
 
@@ -32,22 +32,11 @@ public class MainActivityC extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_corresponsal);
 
+        this.variables();
         sharedPreferences = getSharedPreferences("bd_shared", Context.MODE_PRIVATE);
-        pagar = findViewById(R.id.btnPago);
-        pagar.setOnClickListener(this);
-        retiros = findViewById(R.id.btnRetiros);
-        retiros.setOnClickListener(this);
-        depositos = findViewById(R.id.btnDepositos);
-        depositos.setOnClickListener(this);
-        transferencias = findViewById(R.id.btnTransferencias);
-        transferencias.setOnClickListener(this);
-        historialT = findViewById(R.id.btnHistorial);
-        historialT.setOnClickListener(this);
-        consultarSaldo = findViewById(R.id.btnSaldo);
-        consultarSaldo.setOnClickListener(this);
-        nombre = findViewById(R.id.txtNombreC);
-        saldo = findViewById(R.id.txtSaldo);
-        cuenta = findViewById(R.id.txtCuenta);
+        txtnombre.setText(sharedPreferences.getString("nombre", "Dato no registrado"));
+        txtsaldo.setText(sharedPreferences.getString("NIT", "Dato no registrado"));
+        txtcuenta.setText(sharedPreferences.getString("saldo", "Dato no registrado"));
     }
 
     public void mostrarMenu(View v) {
@@ -110,23 +99,47 @@ public class MainActivityC extends AppCompatActivity implements View.OnClickList
                 finish();
                 break;
             case R.id.btnDepositos:
-                startActivity(new Intent(getApplicationContext(), RetirosActivity.class));
+                startActivity(new Intent(getApplicationContext(), DepositosActivity.class));
                 finish();
                 break;
             case R.id.btnTransferencias:
-                startActivity(new Intent(getApplicationContext(), RetirosActivity.class));
+                startActivity(new Intent(getApplicationContext(), TransferenciasActivity.class));
                 finish();
                 break;
             case R.id.btnHistorial:
-                startActivity(new Intent(getApplicationContext(), RetirosActivity.class));
+                startActivity(new Intent(getApplicationContext(), HistorialTransaccionalActivity.class));
                 finish();
                 break;
             case R.id.btnSaldo:
-                startActivity(new Intent(getApplicationContext(), RetirosActivity.class));
+                startActivity(new Intent(getApplicationContext(), SaldoActivity.class));
                 finish();
                 break;
             default:
                 break;
         }
+    }
+
+    @Override
+    public void variables() {
+        pagar = findViewById(R.id.btnPago);
+        pagar.setOnClickListener(this);
+        retiros = findViewById(R.id.btnRetiros);
+        retiros.setOnClickListener(this);
+        depositos = findViewById(R.id.btnDepositos);
+        depositos.setOnClickListener(this);
+        transferencias = findViewById(R.id.btnTransferencias);
+        transferencias.setOnClickListener(this);
+        historialT = findViewById(R.id.btnHistorial);
+        historialT.setOnClickListener(this);
+        consultarSaldo = findViewById(R.id.btnSaldo);
+        consultarSaldo.setOnClickListener(this);
+        txtnombre = findViewById(R.id.txtNombreC);
+        txtsaldo = findViewById(R.id.txtSaldo);
+        txtcuenta = findViewById(R.id.txtCuenta);
+    }
+
+    @Override
+    public long validarRegistro(long dato) {
+        return 0;
     }
 }

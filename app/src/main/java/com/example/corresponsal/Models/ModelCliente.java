@@ -1,18 +1,23 @@
 package com.example.corresponsal.Models;
 
+import static com.example.corresponsal.BD.Constantes.TABLE_BANCO;
 import static com.example.corresponsal.BD.Constantes.TABLE_CLIENTE;
 import static com.example.corresponsal.BD.Constantes.TABLE_CORRESPONSAL;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.Toast;
 
 import com.example.corresponsal.BD.BaseDatos;
 import com.example.corresponsal.BD.Constantes;
 import com.example.corresponsal.Interfaces.InterfaceCliente;
+import com.example.corresponsal.entidades.Banco;
 import com.example.corresponsal.entidades.Cliente;
 import com.example.corresponsal.entidades.CorresponsalPrincipal;
+import com.example.corresponsal.view.Corresponsal.PinCoActivity;
 
 import java.util.ArrayList;
 

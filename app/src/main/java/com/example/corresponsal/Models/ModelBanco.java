@@ -40,5 +40,4 @@ public class ModelBanco extends BaseDatos implements InterfaceBanco.Model {
             return false;
         }
     }
-
 }

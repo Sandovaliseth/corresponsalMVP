@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".view.Corresponsal.PinCoActivity">
+    android:layout_height="match_parent"
+    tools:context=".view.Corresponsal.PinConfirmarActivity">
 
     <ImageView
         android:id="@+id/imageView5"
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Ingrese su pin"
+        android:text="Ingrese nuevamente su pin"
         android:textAlignment="center"
         android:textColor="#4C4848"
         android:textSize="24sp"
@@ -49,17 +49,17 @@
         app:srcCompat="@drawable/linea" />
 
     <EditText
-        android:id="@+id/txtPin"
-        android:layout_width="254dp"
-        android:layout_height="41dp"
+        android:id="@+id/txtPinConfirmar"
+        android:layout_width="256dp"
+        android:layout_height="59dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="80dp"
         android:background="@drawable/bordes_azules"
         android:ems="10"
         android:hint="PIN"
-        android:textAlignment="center"
         android:inputType="number"
+        android:textAlignment="center"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,16 +90,17 @@
         android:id="@+id/btnAceptar"
         android:layout_width="110dp"
         android:layout_height="36dp"
-        android:layout_marginStart="76dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="56dp"
+        android:layout_marginBottom="156dp"
         android:background="@drawable/btns_azules"
         android:text="@string/app_aceptar"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPin"
-        app:layout_constraintVertical_bias="0.163"
+        app:layout_constraintTop_toBottomOf="@+id/txtPinConfirmar"
+        app:layout_constraintVertical_bias="0.983"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
