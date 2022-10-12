@@ -1,9 +1,10 @@
 package com.example.corresponsal.entidades;
 
 public class Corresponsal {
+
     private int id;
-    private String nombre;
-    private int NIT;
+    private String nombreCorresponsal;
+    private int numeroCuenta;
     private String correoElectronico;
     private String contrasena;
     private double saldo;
@@ -19,20 +20,28 @@ public class Corresponsal {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreCorresponsal() {
+        return nombreCorresponsal;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreCorresponsal(String nombreCorresponsal) {
+        this.nombreCorresponsal = nombreCorresponsal;
     }
 
-    public int getNIT() {
-        return NIT;
+    public double getSaldo() {
+        return saldo;
     }
 
-    public void setNIT(int NIT) {
-        this.NIT = NIT;
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public int getNumeroCuenta() {
+        return numeroCuenta;
+    }
+
+    public void setNumeroCuenta(int numeroCuenta) {
+        this.numeroCuenta = numeroCuenta;
     }
 
     public String getCorreoElectronico() {
@@ -49,13 +58,5 @@ public class Corresponsal {
 
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
-    }
-
-    public double getSaldo() {
-        return saldo;
-    }
-
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
     }
 }

@@ -12,19 +12,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.corresponsal.Interfaces.InterfaceCorresponsal;
 import com.example.corresponsal.R;
 import com.example.corresponsal.view.ActualizarCorresponsalActivity;
 import com.example.corresponsal.view.Corresponsal.CrearClienteBankActivity;
-import com.example.corresponsal.view.Corresponsal.MainActivityC;
+import com.example.corresponsal.view.Corresponsal.PagoActivity;
 import com.example.corresponsal.view.LoginActivity;
 
-public class MainBActivity extends AppCompatActivity {
+public class MainBActivity extends AppCompatActivity implements View.OnClickListener, InterfaceCorresponsal.View {
 
     Button menu;
     SharedPreferences sharedPreferences;
     PopupMenu popupMenu;
+    TextView nombre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,7 @@ public class MainBActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_banco);
 
         sharedPreferences = getSharedPreferences("bd_shared", Context.MODE_PRIVATE);
+        this.variables();
     }
 
     public void mostrarMenu(View v) {
@@ -80,5 +84,44 @@ public class MainBActivity extends AppCompatActivity {
                         ).show();
                     }
                 }).show();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()) {
+            case R.id.btnCrearCli:
+                startActivity(new Intent(getApplicationContext(), CrearClienteActivity.class));
+                break;
+            case R.id.btnCrearCo:
+                startActivity(new Intent(getApplicationContext(), RegistrarCorresponsalActivity.class));
+                break;
+            case R.id.btnConsultarCli:
+                    startActivity(new Intent(getApplicationContext(), ConsultarClienteActivity.class));
+                break;
+            case R.id.btnConsultarCo:
+                startActivity(new Intent(getApplicationContext(), ConsultarCorresponsalActivity.class));
+                break;
+            case R.id.btnListaCli:
+                startActivity(new Intent(getApplicationContext(), ListaClientesActivity.class));
+                break;
+            case R.id.btnListaCo:
+                startActivity(new Intent(getApplicationContext(), ListaCorresponsalesActivity.class));
+                break;
+        }
+    }
+
+    @Override
+    public void variables() {
+        nombre = findViewById(R.id.txtNombreC);
+    }
+
+    @Override
+    public void loginSucess() {
+
+    }
+
+    @Override
+    public void error() {
+
     }
 }

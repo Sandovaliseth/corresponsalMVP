@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.example.corresponsal.Interfaces.InterfaceCorresponsal;
 import com.example.corresponsal.Models.ModelCorresponsal;
-import com.example.corresponsal.entidades.CorresponsalPrincipal;
+import com.example.corresponsal.entidades.Corresponsal;
 
 public class PresentCorresponsal implements InterfaceCorresponsal.Presenter {
 
@@ -19,7 +19,7 @@ public class PresentCorresponsal implements InterfaceCorresponsal.Presenter {
     }
 
     @Override
-    public void Login(CorresponsalPrincipal corresponsal) {
+    public void Login(Corresponsal corresponsal) {
         if(this.model.Iniciar(corresponsal)){
             validarLogin();
         }else{
@@ -28,12 +28,12 @@ public class PresentCorresponsal implements InterfaceCorresponsal.Presenter {
     }
 
     @Override
-    public void insertar(CorresponsalPrincipal corresponsal) {
+    public void insertar(Corresponsal corresponsal) {
         this.model.registrarCorresponsal(corresponsal);
     }
 
     @Override
-    public void consultar(CorresponsalPrincipal corresponsal) {
+    public void consultar(Corresponsal corresponsal) {
         this.model.consultarCorresponsal(corresponsal);
     }
 

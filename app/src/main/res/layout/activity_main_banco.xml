@@ -47,7 +47,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btnPago"
+        android:id="@+id/btnCrearCli"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="47dp"
@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtNombreC" />
 
     <Button
-        android:id="@+id/btnRetiros"
+        android:id="@+id/btnCrearCo"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="72dp"
@@ -75,11 +75,11 @@
         android:textColor="@color/white"
         android:textSize="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnPago"
+        app:layout_constraintStart_toEndOf="@+id/btnCrearCli"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreC" />
 
     <Button
-        android:id="@+id/btnDepositos"
+        android:id="@+id/btnConsultarCli"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="44dp"
@@ -91,10 +91,10 @@
         android:textColor="@color/white"
         android:textSize="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPago" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearCli" />
 
     <Button
-        android:id="@+id/btnTransferencias"
+        android:id="@+id/btnConsultarCo"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="77dp"
@@ -107,11 +107,11 @@
         android:textColor="@color/white"
         android:textSize="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnDepositos"
-        app:layout_constraintTop_toBottomOf="@+id/btnRetiros" />
+        app:layout_constraintStart_toEndOf="@+id/btnConsultarCli"
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearCo" />
 
     <Button
-        android:id="@+id/btnHistorial"
+        android:id="@+id/btnListaCli"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="47dp"
@@ -125,10 +125,10 @@
         android:textSize="8dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDepositos" />
+        app:layout_constraintTop_toBottomOf="@+id/btnConsultarCo" />
 
     <Button
-        android:id="@+id/btnSaldo"
+        android:id="@+id/btnListaCo"
         android:layout_width="118dp"
         android:layout_height="134dp"
         android:layout_marginStart="77dp"
@@ -144,8 +144,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toEndOf="@+id/btnHistorial"
-        app:layout_constraintTop_toBottomOf="@+id/btnTransferencias"
+        app:layout_constraintStart_toEndOf="@+id/btnListaCli"
+        app:layout_constraintTop_toBottomOf="@+id/btnConsultarCo"
         app:layout_constraintVertical_bias="0.346" />
 
     <Button

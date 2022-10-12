@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.corresponsal.BD.BaseDatos;
 import com.example.corresponsal.BD.Constantes;
 import com.example.corresponsal.Interfaces.InterfaceCorresponsal;
-import com.example.corresponsal.entidades.CorresponsalPrincipal;
+import com.example.corresponsal.entidades.Corresponsal;
 
 import java.util.ArrayList;
 
@@ -39,7 +39,7 @@ public class ModelCorresponsal extends BaseDatos implements InterfaceCorresponsa
     }
 
     @Override
-    public boolean Iniciar(CorresponsalPrincipal corresponsal) {
+    public boolean Iniciar(Corresponsal corresponsal) {
         db= this.OpenConexionDb(context);
         Cursor cursorU = db.rawQuery("SELECT * FROM " + TABLE_CORRESPONSAL + " WHERE correoElectronico= '" + corresponsal.getCorreoElectronico() + "' AND contrasena= '" + corresponsal.getContrasena()+"'", null);
         if (cursorU.getCount()>0) {
@@ -50,7 +50,7 @@ public class ModelCorresponsal extends BaseDatos implements InterfaceCorresponsa
     }
 
     @Override
-    public long registrarCorresponsal(CorresponsalPrincipal corresponsal) {
+    public long registrarCorresponsal(Corresponsal corresponsal) {
         long id=0;
         try{
             db= this.OpenConexionDb(context);
@@ -67,15 +67,15 @@ public class ModelCorresponsal extends BaseDatos implements InterfaceCorresponsa
     }
 
     @Override
-    public ArrayList<CorresponsalPrincipal> mostrarCorresponsal() {
+    public ArrayList<Corresponsal> mostrarCorresponsal() {
         db= this.OpenConexionDb(context);
-        ArrayList<CorresponsalPrincipal> listadoCorresponsal = new ArrayList<>();
-        CorresponsalPrincipal corresponsal = null;
+        ArrayList<Corresponsal> listadoCorresponsal = new ArrayList<>();
+        Corresponsal corresponsal = null;
         Cursor cursorCorresponsal = null;
         cursorCorresponsal = db.rawQuery("SELECT * FROM " + TABLE_CORRESPONSAL, null);
         if(cursorCorresponsal.moveToFirst()){
             do{
-                corresponsal = new CorresponsalPrincipal();
+                corresponsal = new Corresponsal();
                 corresponsal.setId(cursorCorresponsal.getInt(0));
                 corresponsal.setNombreCorresponsal(cursorCorresponsal.getString(1));
                 corresponsal.setNumeroCuenta(cursorCorresponsal.getInt(2));
@@ -89,13 +89,13 @@ public class ModelCorresponsal extends BaseDatos implements InterfaceCorresponsa
     }
 
     @Override
-    public CorresponsalPrincipal consultarCorresponsal(CorresponsalPrincipal corresponsal) {
+    public Corresponsal consultarCorresponsal(Corresponsal corresponsal) {
         db= this.OpenConexionDb(context);
-        CorresponsalPrincipal corresponsalP = null;
+        Corresponsal corresponsalP = null;
         Cursor cursorCorresponsal;
         cursorCorresponsal = db.rawQuery("SELECT * FROM " + TABLE_CORRESPONSAL + " WHERE id= " + corresponsal.getNumeroCuenta() + " LIMIT 1", null);
         if(cursorCorresponsal.moveToFirst()){
-            corresponsalP = new CorresponsalPrincipal();
+            corresponsalP = new Corresponsal();
             corresponsalP.setNombreCorresponsal(cursorCorresponsal.getString(0));
             corresponsalP.setNumeroCuenta(cursorCorresponsal.getInt(1));
             corresponsalP.setCorreoElectronico(cursorCorresponsal.getString(2));

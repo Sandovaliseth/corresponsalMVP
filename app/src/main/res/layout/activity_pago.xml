@@ -118,6 +118,7 @@
         tools:ignore="TouchTargetSizeCheck">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/numero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bordes_azules"
@@ -144,12 +145,12 @@
         tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fechaMes"
-        android:layout_width="73dp"
-        android:layout_height="52dp"
+        android:id="@+id/fechaExpiracion"
+        android:layout_width="146dp"
+        android:layout_height="49dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginEnd="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/CVV"
@@ -157,36 +158,16 @@
         tools:ignore="TouchTargetSizeCheck">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fecha"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:background="@drawable/bordes_azules"
             android:ems="10"
-            android:hint="mm"
+            android:hint="mm / dd"
+            android:inputType="date"
             android:textSize="14dp"
             tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fechaDia"
-        android:layout_width="73dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/fechaMes"
-        app:layout_constraintTop_toBottomOf="@+id/numeroTarjeta"
-        tools:ignore="TouchTargetSizeCheck">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:background="@drawable/bordes_azules"
-            android:ems="10"
-            android:hint="dd"
-            android:textSize="14dp"
-            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -207,6 +188,7 @@
             android:background="@drawable/bordes_azules"
             android:ems="10"
             android:hint="@string/app_cliente"
+            android:inputType="textCapCharacters"
             android:textSize="15dp"
             tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -292,10 +274,10 @@
         android:textColor="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toEndOf="@+id/btnCancelar"
         app:layout_constraintTop_toBottomOf="@+id/montoRetiro"
-        app:layout_constraintVertical_bias="0.371"
+        app:layout_constraintVertical_bias="0.428"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

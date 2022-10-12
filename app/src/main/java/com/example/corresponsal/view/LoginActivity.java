@@ -15,12 +15,11 @@ import com.example.corresponsal.Presenter.PresentBanco;
 import com.example.corresponsal.Presenter.PresentCorresponsal;
 import com.example.corresponsal.R;
 import com.example.corresponsal.entidades.Banco;
-import com.example.corresponsal.entidades.CorresponsalPrincipal;
+import com.example.corresponsal.entidades.Corresponsal;
 import com.example.corresponsal.Adapter.SharedPreferences;
 import com.example.corresponsal.view.Banco.MainBActivity;
 import com.example.corresponsal.view.Corresponsal.MainActivityC;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity implements InterfaceCorresponsal.View, InterfaceBanco.View, View.OnClickListener {
 
@@ -28,7 +27,7 @@ public class LoginActivity extends AppCompatActivity implements InterfaceCorresp
     TextInputEditText correoCorresponsal, contrasenaCorresponsal, correoBanco, contrasenaBanco;
     Button iniciarSesion, iniciarSesion2;
     InterfaceCorresponsal.Presenter presenterC;
-    CorresponsalPrincipal corresponsal;
+    Corresponsal corresponsal;
     SharedPreferences sharedPreference;
     InterfaceBanco.Presenter presenterB;
     Banco banco;
@@ -40,7 +39,7 @@ public class LoginActivity extends AppCompatActivity implements InterfaceCorresp
 
         this.variables();
         presenterC = new PresentCorresponsal(this, getApplicationContext());
-        corresponsal = new CorresponsalPrincipal();
+        corresponsal = new Corresponsal();
         presenterB = new PresentBanco(this, getApplicationContext());
         banco = new Banco();
 
