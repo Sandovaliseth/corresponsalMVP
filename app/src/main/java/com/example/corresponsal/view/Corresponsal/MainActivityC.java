@@ -137,9 +137,4 @@ public class MainActivityC extends AppCompatActivity implements View.OnClickList
         txtsaldo = findViewById(R.id.txtSaldo);
         txtcuenta = findViewById(R.id.txtCuenta);
     }
-
-    @Override
-    public long validarRegistro(long dato) {
-        return 0;
-    }
 }

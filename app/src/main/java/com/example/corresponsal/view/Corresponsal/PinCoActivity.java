@@ -73,9 +73,4 @@ public class PinCoActivity extends AppCompatActivity implements View.OnClickList
         cedula = recibirDatos.getInt("cedula");
         saldo = recibirDatos.getDouble("saldo");
     }
-
-    @Override
-    public long validarRegistro(long dato) {
-        return 0;
-    }
 }

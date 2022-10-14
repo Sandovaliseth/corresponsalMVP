@@ -73,7 +73,6 @@
         android:background="@drawable/bordes_azules"
         android:ems="10"
         android:hint="NOMBRE DEL CLIENTE"
-        android:inputType="textCapCharacters"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
@@ -121,6 +120,7 @@
             android:background="@drawable/bordes_azules"
             android:ems="10"
             android:hint="Saldo inicial"
+            android:inputType="number"
             android:textSize="15dp"
             tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>

@@ -50,6 +50,39 @@ public class PinConfirmarActivity extends AppCompatActivity implements View.OnCl
         pin = recibirDatos.getInt("PIN");
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btnAceptar:
+                if(confirmarPin.equals(pin)){
+                    cliente.setNombre(nombre);
+                    cliente.setDocumento(Integer.parseInt(cedula.toString()));
+                    cliente.setPIN(Integer.parseInt(pin.toString()));
+                    cliente.setConfirmarPIN(Integer.parseInt(confirmarPin.getText().toString()));
+                    cliente.setSaldo(Double.parseDouble(saldo.toString()));
+                    Long dato = presenter.nuevoCliente(cliente);
+                    validarRegistro(dato);
+                } else {
+                    confirmarPin.setError("El pin no coincide");
+                }
+                break;
+            case R.id.btnCancelar3:
+                new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                        .setTitleText("Registro cliente cancelado")
+                        .setConfirmText("Salir")
+                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                            @Override
+                            public void onClick(SweetAlertDialog sDialog) {
+                                sDialog.dismissWithAnimation();
+                                startActivity(new Intent(getApplicationContext(), MainActivityC.class));
+                                finish();
+                            }
+                        })
+                        .show();
+                break;
+        }
+    }
+
     public long validarRegistro(long dato) {
         if(dato>0){
             new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
@@ -69,33 +102,5 @@ public class PinConfirmarActivity extends AppCompatActivity implements View.OnCl
             ).show();
         }
         return dato;
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btnAceptar:
-                cliente.setNombre(nombre);
-                cliente.setDocumento(Integer.parseInt(cedula.toString()));
-                cliente.setPIN(Integer.parseInt(pin.toString()));
-                cliente.setConfirmarPIN(Integer.parseInt(confirmarPin.getText().toString()));
-                cliente.setSaldo(Double.parseDouble(saldo.toString()));
-                presenter.nuevoCliente(cliente);
-                break;
-            case R.id.btnCancelar3:
-                new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
-                        .setTitleText("Registro cliente cancelado")
-                        .setConfirmText("Salir")
-                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                            @Override
-                            public void onClick(SweetAlertDialog sDialog) {
-                                sDialog.dismissWithAnimation();
-                                startActivity(new Intent(getApplicationContext(), MainActivityC.class));
-                                finish();
-                            }
-                        })
-                        .show();
-                break;
-        }
     }
 }

@@ -1,21 +1,30 @@
 package com.example.corresponsal.entidades;
 
 public class Pago {
-    private long numeroTarjeta;
+    private int id;
+    private int numeroTarjeta;
     private int fechaExpiracion;
     private int CVV;
-    private String nombreCliente;
+    private Cliente nombreCliente;
     private int cuotas;
     private double valorPagar;
 
     public Pago() {
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public long getNumeroTarjeta() {
         return numeroTarjeta;
     }
 
-    public void setNumeroTarjeta(long numeroTarjeta) {
+    public void setNumeroTarjeta(int numeroTarjeta) {
         this.numeroTarjeta = numeroTarjeta;
     }
 
@@ -35,11 +44,11 @@ public class Pago {
         this.CVV = CVV;
     }
 
-    public String getNombreCliente() {
+    public Cliente getNombreCliente() {
         return nombreCliente;
     }
 
-    public void setNombreCliente(String nombreCliente) {
+    public void setNombreCliente(Cliente nombreCliente) {
         this.nombreCliente = nombreCliente;
     }
 

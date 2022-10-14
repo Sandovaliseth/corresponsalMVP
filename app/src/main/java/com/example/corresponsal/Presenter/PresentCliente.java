@@ -21,8 +21,8 @@ public class PresentCliente implements InterfaceCliente.Presenter {
     }
 
     @Override
-    public void nuevoCliente(Cliente cliente) {
-        validacion(this.model.insertarCliente(cliente));
+    public long nuevoCliente(Cliente cliente) {
+        return this.model.insertarCliente(cliente);
     }
 
     @Override
@@ -33,10 +33,5 @@ public class PresentCliente implements InterfaceCliente.Presenter {
     @Override
     public ArrayList<Cliente> lista() {
         return this.model.mostrarClientes();
-    }
-
-    @Override
-    public void validacion(long dato) {
-        this.view.validarRegistro(dato);
     }
 }

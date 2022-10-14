@@ -50,8 +50,8 @@
 
     <EditText
         android:id="@+id/txtPinConfirmar"
-        android:layout_width="256dp"
-        android:layout_height="59dp"
+        android:layout_width="251dp"
+        android:layout_height="51dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="80dp"

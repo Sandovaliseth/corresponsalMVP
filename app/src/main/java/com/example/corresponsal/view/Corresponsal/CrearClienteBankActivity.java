@@ -1,5 +1,7 @@
 package com.example.corresponsal.view.Corresponsal;
 
+import static com.example.corresponsal.BD.MetodosAdicionales.validarMayusculas;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,13 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.corresponsal.BD.MetodosAdicionales;
 import com.example.corresponsal.Interfaces.InterfaceCliente;
-import com.example.corresponsal.Presenter.PresentCliente;
 import com.example.corresponsal.R;
-import com.example.corresponsal.entidades.Cliente;
 import com.google.android.material.textfield.TextInputEditText;
-
-import java.util.Locale;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
@@ -37,13 +36,21 @@ public class CrearClienteBankActivity extends AppCompatActivity implements View.
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnConfirmar2:
-                Bundle enviarDatos = new Bundle();
-                enviarDatos.putString("nombre", nombre.getText().toString());
-                enviarDatos.putInt("cedula", Integer.parseInt(cedula.getText().toString()));
-                enviarDatos.putDouble("saldo", Double.parseDouble(saldoInicial.getText().toString()));
-                Intent intent = new Intent(getApplicationContext(), PinCoActivity.class);
-                intent.putExtras(enviarDatos);
-                startActivity(intent);
+                if (MetodosAdicionales.vacioValidar(nombre.getText().toString()) & MetodosAdicionales.vacioValidar(cedula.getText().toString()) & MetodosAdicionales.vacioValidar(saldoInicial.getText().toString())) {
+                    if (MetodosAdicionales.validarMayusculas(nombre.getText().toString())) {
+                        Bundle enviarDatos = new Bundle();
+                        enviarDatos.putString("nombre", nombre.getText().toString());
+                        enviarDatos.putInt("cedula", Integer.parseInt(cedula.getText().toString()));
+                        enviarDatos.putDouble("saldo", Double.parseDouble(saldoInicial.getText().toString()));
+                        Intent intent = new Intent(getApplicationContext(), PinCoActivity.class);
+                        intent.putExtras(enviarDatos);
+                        startActivity(intent);
+                    } else {
+                        nombre.setError("El campo solo acepta mayusculas");
+                    }
+                } else {
+                    Toast.makeText(getApplicationContext(), "Unos o más campos estan vacíos", Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.btnCancelar2:
                 new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
@@ -73,10 +80,5 @@ public class CrearClienteBankActivity extends AppCompatActivity implements View.
         confirmar.setOnClickListener(this);
         cancelar = findViewById(R.id.btnCancelar2);
         cancelar.setOnClickListener(this);
-    }
-
-    @Override
-    public long validarRegistro(long dato) {
-        return 0;
     }
 }

@@ -22,6 +22,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL(Constantes.CREAR_BANCO);
         db.execSQL(Constantes.INSERTAR_BANCO);
         db.execSQL(Constantes.CREAR_CLIENTE);
+        db.execSQL(Constantes.CREAR_PAGO);
     }
 
     @Override
@@ -29,6 +30,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE " + Constantes.TABLE_CORRESPONSAL);
         db.execSQL("DROP TABLE " + Constantes.TABLE_BANCO);
         db.execSQL("DROP TABLE " + Constantes.TABLE_CLIENTE);
+        db.execSQL("DROP TABLE " + Constantes.TABLE_PAGOS);
         onCreate(db);
     }
 }
